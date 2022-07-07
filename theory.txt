@@ -1,0 +1,65 @@
+* Synchronous:- tasks are performed one at a time
+
+* Asynchronous:- second task do not wait to finish first task, it get executed simultaneously
+    
+    - node.js, javascript is a asynchronous programming language
+    - php is a synchronous language
+
+Drawbacks of asynchronous
+eg:
+/*
+    let a= 10;
+    let b=0;
+
+    setTimeout(()=>{
+        b=20;
+    },2000)
+    console.log(a+b);
+    
+    Output: 10 (Output must be 30 but due to setTimeout it is 10)
+*/
+
+this can be handled using promises
+/*
+    let a=20;
+    let b=0;
+
+
+    let waitingData= new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        resolve(30);
+    },2000)
+    })
+
+    waitingData.then((data)=>{
+    b=data;
+    console.log(a+b)
+    })
+*/
+
+API- Application programming interface
+-APIs are mechanisms that enable two software components to communicate with each other
+ using a set of definitions and protocols.
+    For example, the weather bureau’s software system contains daily weather data. 
+    The weather app on your phone “talks” to this system via APIs and shows you daily weather updates on your phone.
+
+    Endpoints- base url is Endpoints (https://api.openweathermap.org/data/2.5/weather)
+    path- (https://api.openweathermap.org/data/2.5/weather) here 2.5/weather is path
+    parameters- (https://api.openweathermap.org/data/2.5/weather?q=phagwara,in) parameters are written after a queation mark '?' with key value pair, here 'q' is key and 'phagwara' is value
+
+JSON:- javascript object notation
+    * it is file format  
+    * through api we receive data in json, xml, html
+
+HTTP Response code:- it indicates that whether a http request has been successfully completed
+
+    1. Informational responses------->(100-199)
+    2. Successful responses---------->(200-299)
+    3. Redirects--------------------->(300-399)
+    4. Client errors----------------->(400-499)
+    5. Server errors----------------->(500-599)
+
+    Some important Response Code:
+    * 200---->OK
+    * 404---->Not Found
+    * 401---->unauthorized access

@@ -9,6 +9,7 @@
   "author": "aditya",
   "license": "ISC",
   "dependencies": {
+    "nodemailer": "^6.7.7",
     "superheroes": "^3.0.0"
   }
 }

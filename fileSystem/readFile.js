@@ -1,5 +1,5 @@
 var fs = require('fs');
- 
+ //asyncronous
 // read file abc.html
 fs.readFile('abc.html',
     // callback function that is called when reading file is done

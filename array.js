@@ -108,7 +108,7 @@ return a-b;
 var items = [ 'David', 'John', 'Michael', 'Reeta' , 'Anuj'];
 console.log(items.splice(1, 0, 'Rani', 'Rahul', 'Sahil'))
 console.log(items);
-/*-----------------------------------------------------------*/
+console.log('/*----------------ES6 array methods----------------*/');
 // ES6 array methods
 // find
 var numbers = [6, 4, 8, 3];
@@ -126,3 +126,13 @@ console.log(val.next().value);
 console.log(Array.from("hello"));
 // keys
 console.log(Array.from([45, 78].keys()))
+
+
+console.log();
+console.log('------ traversing string array using "in" operator ------');
+var trees=['redwood', 'bay', 'cedar', 'oak', 'maple'];
+console.log(0 in trees);
+console.log(3 in trees);
+console.log(6 in trees);
+console.log('bay' in trees);//bay is not an index
+console.log('length' in trees);

@@ -12,9 +12,11 @@ app.listen(port,()=> {
 
 //handling request
 app.get("/", (req,res)=>{
-     res.send("<h1>Hello!</h1> How are you?");// sending response to the browser.
+     res.send("<h1>Hello World!</h1>");// sending response to the browser.
 })
-
+app.delete("/del",(req,res)=>{
+     res.send("Delete request called!");
+})
 //routing to about page and sending html as response
 app.get("/about", (req,res)=>{
      res.send("<h1>About Me</h1> Name: Aditya Raj <br> Reg No.- 11911045 <br> Domain: Web Development");// sending response to the browser.

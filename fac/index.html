@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>factorial</title>
+</head>
+<body>
+    <form action="">
+        <label for="">Enter a number: </label><br>
+        <input type="number" id="num">
+        <button onclick="calculate()">Submit</button>
+    </form>
+    <h4 id="ans"></h4>
+    <script>
+        function findFac(num){
+            if(num == 0 || num == 1){
+                return 1;
+            }else{
+                return num * findFac(num-1);
+            }
+        }
+        function calculate(){
+            var num=document.getElementById('num').value;
+            var answer= findFac(num);
+            document.getElementById('ans').innerHTML=answer;
+        }
+    </script>
+</body>
+</html>
